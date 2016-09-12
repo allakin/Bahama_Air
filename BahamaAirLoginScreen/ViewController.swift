@@ -50,6 +50,10 @@ class ViewController: UIViewController {
   let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
   let status = UIImageView(image: UIImage(named: "banner"))
   let label = UILabel()
+//		let clouds1 = UIImageView(image: UIImage(named: "bg-sunny-cloud-1"))
+//		let clouds2 = UIImageView(image: UIImage(named: "bg-sunny-cloud-2"))
+//		let clouds3 = UIImageView(image: UIImage(named: "bg-sunny-cloud-3"))
+//		let clouds4 = UIImageView(image: UIImage(named: "bg-sunny-cloud-4"))
   let messages = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
   
   // MARK: view controller methods
@@ -80,6 +84,11 @@ class ViewController: UIViewController {
 			heading.center.x  -= view.bounds.width
 			username.center.x -= view.bounds.width
 			password.center.x -= view.bounds.width
+			loginButton.center.x -= view.bounds.width
+			cloud1.center.y -= view.bounds.width
+			cloud2.center.y -= view.bounds.width
+			cloud3.center.x -= view.bounds.width
+			cloud4.center.x -= view.bounds.width
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -97,15 +106,30 @@ class ViewController: UIViewController {
 			})
 			
 			//анимация с задержкой для textField username
-			UIView.animateWithDuration(0.5, delay: 0.3, options: .BeginFromCurrentState , animations: {
+			UIView.animateWithDuration(0.5, delay: 0.4, options: .BeginFromCurrentState , animations: {
 				self.username.center.x += self.view.bounds.width
+				self.cloud1.center.y += self.view.bounds.width
+				
 				}, completion: nil)
 			
 			//анимация с задержкой для textField password
-			UIView.animateWithDuration(0.5, delay: 0.4, options: .BeginFromCurrentState, animations: {
+			UIView.animateWithDuration(0.5, delay: 0.5, options: .BeginFromCurrentState, animations: {
 				self.password.center.x += self.view.bounds.width
+				self.cloud2.center.y += self.view.bounds.width
 			}, completion: nil)
 			
+			//анимация с задержкой для textField loginButton
+			UIView.animateWithDuration(0.6, delay: 0.6, options: .CurveEaseIn, animations: {
+				self.loginButton.center.x += self.view.bounds.width
+				}, completion: nil)
+			
+			UIView.animateWithDuration(0.4, delay: 0.3, options: .CurveEaseIn, animations: {
+				self.cloud3.center.x += self.view.bounds.width
+			}, completion: nil)
+			
+			UIView.animateWithDuration(0.2, delay: 0.2, options: .CurveEaseOut, animations: {
+				self.cloud4.center.x += self.view.bounds.width
+			}, completion: nil)
   }
   
   // MARK: further methods
