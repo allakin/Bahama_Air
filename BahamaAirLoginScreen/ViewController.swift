@@ -101,6 +101,11 @@ class ViewController: UIViewController {
 				self.username.center.x += self.view.bounds.width
 				}, completion: nil)
 			
+			//анимация с задержкой для textField password
+			UIView.animateWithDuration(0.5, delay: 0.4, options: .BeginFromCurrentState, animations: {
+				self.password.center.x += self.view.bounds.width
+			}, completion: nil)
+			
   }
   
   // MARK: further methods
