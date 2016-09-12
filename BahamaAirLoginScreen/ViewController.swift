@@ -123,12 +123,14 @@ class ViewController: UIViewController {
 				self.loginButton.center.x += self.view.bounds.width
 				}, completion: nil)
 			
+			//анимация с задержкой для cloud3
 			UIView.animateWithDuration(0.4, delay: 0.3, options: .CurveEaseIn, animations: {
 				self.cloud3.center.x += self.view.bounds.width
 			}, completion: nil)
 			
-			UIView.animateWithDuration(0.2, delay: 0.2, options: .CurveEaseOut, animations: {
-				self.cloud4.center.x += self.view.bounds.width
+			//анимация с задержкой для cloud4
+			UIView.animateWithDuration(0.3, delay: 0.3, options: .CurveEaseOut, animations: {
+			self.cloud4.center.x += self.view.bounds.width
 			}, completion: nil)
   }
   
