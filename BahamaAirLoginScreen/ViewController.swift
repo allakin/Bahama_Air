@@ -89,10 +89,18 @@ class ViewController: UIViewController {
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
+
 			//добавляем анимацию появления заголовка
 			UIView.animateWithDuration(0.5, animations: {
 				self.heading.center.x += self.view.bounds.width
+				//self.username.center.x += self.view.bounds.width
 			})
+			
+			//анимация с задержкой для textField username
+			UIView.animateWithDuration(0.5, delay: 0.3, options: .BeginFromCurrentState , animations: {
+				self.username.center.x += self.view.bounds.width
+				}, completion: nil)
+			
   }
   
   // MARK: further methods
