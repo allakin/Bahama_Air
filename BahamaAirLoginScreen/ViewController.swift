@@ -89,7 +89,10 @@ class ViewController: UIViewController {
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    
+			//добавляем анимацию появления заголовка
+			UIView.animateWithDuration(0.5, animations: {
+				self.heading.center.x += self.view.bounds.width
+			})
   }
   
   // MARK: further methods
