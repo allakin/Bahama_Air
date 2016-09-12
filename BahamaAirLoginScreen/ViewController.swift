@@ -75,6 +75,11 @@ class ViewController: UIViewController {
     label.textColor = UIColor(red: 0.89, green: 0.38, blue: 0.0, alpha: 1.0)
     label.textAlignment = .Center
     status.addSubview(label)
+			
+			//Это перемещает каждый из элементов формы за пределы видимых границ экрана
+			heading.center.x  -= view.bounds.width
+			username.center.x -= view.bounds.width
+			password.center.x -= view.bounds.width
   }
   
   override func viewWillAppear(animated: Bool) {
